@@ -62,3 +62,5 @@ typings/
 
 #json lock
 package-lock.json
+
+users.db
