@@ -259,11 +259,13 @@ class UserController {
 
             let result = Object.assign({}, userOld, values)
 
+                console.log(userOld._photo);
+
             this.getPhoto(this.formUpdateEl).then(
                 (content) => {
 
-                    if (values.photo === null) {
-                        userOld._photo
+                    if (!values.photo) {
+                        result._photo = userOld._photo
                     } else {
                         result._photo = content
                     }
